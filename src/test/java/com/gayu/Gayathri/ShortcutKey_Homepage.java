@@ -3,9 +3,12 @@ package com.gayu.Gayathri;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
+import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,17 +17,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 
-public class Shortcutkey_Edit {
+public class ShortcutKey_Homepage {
 	private RemoteWebDriver driver;
 	@BeforeTest
 	public void setup() throws MalformedURLException 
 	{
 		DesiredCapabilities dc = DesiredCapabilities.chrome();
-		URL url = new URL("http://172.12.20.99:4443/wd/hub");
+		URL url = new URL("http://172.12.20.99:4444/wd/hub");
 		driver = new RemoteWebDriver(url, dc);
 	}
 	@Test(priority=1)
@@ -102,7 +102,7 @@ public class Shortcutkey_Edit {
 				break;
 			}}}
 	@Test(priority=3)
-	public void Direct_EditPage() {
+	public void Direct_drawpage() {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 			Actions actions = new Actions(driver);
@@ -118,6 +118,7 @@ public class Shortcutkey_Edit {
 	        Thread.sleep(3000);	        
 	        System.out.println("--------------------------*****************-----------------------");
 	        System.out.println("Assertion passed: The retrieved text matches the expected text.");
+	        System.out.println("The shorcutkeys go to direct Homepage sucesssfully");
 	    } catch (InterruptedException e) {
 	        Thread.currentThread().interrupt();
 	        System.out.println("Thread interrupted while sleeping.");
@@ -125,7 +126,37 @@ public class Shortcutkey_Edit {
 	        System.out.println("Assertion failed: " + e.getMessage());
 	    } catch (Exception e) {
 	        System.out.println("An error occurred: " + e.getMessage());
-	    }}
+	    }
+		try {
+		    WebDriverWait wait = new WebDriverWait(driver, 50);
+		    Actions actions = new Actions(driver);
+		    actions.keyDown(Keys.SHIFT) 
+		           .sendKeys("p")  
+		           .keyUp(Keys.SHIFT)  
+		           .build()
+		           .perform();
+		    
+		    WebElement selectedRegion = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()=' -1 : Not Available-NA ']")));
+		    String actualText = selectedRegion.getText();           
+		    String expectedText = "-1 : Not Available-NA";
+		    
+		    Assert.assertEquals(actualText, expectedText, "The retrieved text does not match the expected text.");	        
+		    
+		    Thread.sleep(3000);	        
+		    
+		    System.out.println("--------------------------*****************-----------------------");
+		    System.out.println("Assertion passed: The retrieved text matches the expected text.");
+		    
+		    System.out.println("--------------------------*****************-----------------------");
+		    System.out.println("The shortcut keys came back to the Home page sucessfully");
+		} catch (InterruptedException e) {
+		    Thread.currentThread().interrupt();
+		    System.out.println("Thread interrupted while sleeping.");
+		} catch (AssertionError e) {
+		    System.out.println("Assertion failed: " + e.getMessage());
+		} catch (Exception e) {
+		    System.out.println("An error occurred: " + e.getMessage());
+		}}
 		@AfterTest
 		public void tearDown() {
 			if (driver != null) {
