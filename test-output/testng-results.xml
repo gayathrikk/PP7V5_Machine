@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-30T12:30:13 IST" name="Default suite" finished-at="2024-03-30T12:30:57 IST" duration-ms="44605">
+  <suite started-at="2024-03-30T12:49:28 IST" name="Default suite" finished-at="2024-03-30T12:50:07 IST" duration-ms="39066">
     <groups>
     </groups>
-    <test started-at="2024-03-30T12:30:13 IST" name="Default test" finished-at="2024-03-30T12:30:57 IST" duration-ms="44605">
-      <class name="com.gayu.Gayathri.ShortcutKey_Homepage">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.ShortcutKey_Homepage@7bd4937b]" started-at="2024-03-30T12:30:13 IST" name="setup" finished-at="2024-03-30T12:30:14 IST" duration-ms="1537" status="PASS">
+    <test started-at="2024-03-30T12:49:28 IST" name="Default test" finished-at="2024-03-30T12:50:07 IST" duration-ms="39066">
+      <class name="com.gayu.Gayathri.Shortcutkey_Edit">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.Shortcutkey_Edit@7bd4937b]" started-at="2024-03-30T12:49:28 IST" name="setup" finished-at="2024-03-30T12:49:30 IST" duration-ms="1782" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.ShortcutKey_Homepage@7bd4937b]" started-at="2024-03-30T12:30:14 IST" name="Login" finished-at="2024-03-30T12:30:41 IST" duration-ms="26380" status="PASS">
+        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.Shortcutkey_Edit@7bd4937b]" started-at="2024-03-30T12:49:30 IST" name="Login" finished-at="2024-03-30T12:49:54 IST" duration-ms="23978" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.ShortcutKey_Homepage@7bd4937b]" started-at="2024-03-30T12:30:41 IST" name="table" finished-at="2024-03-30T12:30:48 IST" duration-ms="7846" status="PASS">
+        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.Shortcutkey_Edit@7bd4937b]" started-at="2024-03-30T12:49:54 IST" name="table" finished-at="2024-03-30T12:50:03 IST" duration-ms="9038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- table -->
-        <test-method signature="Direct_drawpage()[pri:3, instance:com.gayu.Gayathri.ShortcutKey_Homepage@7bd4937b]" started-at="2024-03-30T12:30:48 IST" name="Direct_drawpage" finished-at="2024-03-30T12:30:56 IST" duration-ms="7901" status="PASS">
+        <test-method signature="Direct_Draw_page()[pri:3, instance:com.gayu.Gayathri.Shortcutkey_Edit@7bd4937b]" started-at="2024-03-30T12:50:03 IST" name="Direct_Draw_page" finished-at="2024-03-30T12:50:07 IST" duration-ms="4092" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Direct_drawpage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.ShortcutKey_Homepage@7bd4937b]" started-at="2024-03-30T12:30:56 IST" name="tearDown" finished-at="2024-03-30T12:30:57 IST" duration-ms="902" status="PASS">
+        </test-method> <!-- Direct_Draw_page -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.Shortcutkey_Edit@7bd4937b]" started-at="2024-03-30T12:50:07 IST" name="tearDown" finished-at="2024-03-30T12:50:07 IST" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gayu.Gayathri.ShortcutKey_Homepage -->
+      </class> <!-- com.gayu.Gayathri.Shortcutkey_Edit -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
