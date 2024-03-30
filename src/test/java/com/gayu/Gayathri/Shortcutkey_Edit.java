@@ -102,7 +102,7 @@ public class Shortcutkey_Edit {
 				break;
 			}}}
 	@Test(priority=3)
-	public void Direct_EditPage() {
+	public void Direct_Draw_page() {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 			Actions actions = new Actions(driver);
@@ -118,6 +118,7 @@ public class Shortcutkey_Edit {
 	        Thread.sleep(3000);	        
 	        System.out.println("--------------------------*****************-----------------------");
 	        System.out.println("Assertion passed: The retrieved text matches the expected text.");
+	        System.out.println("The shorcutkeys go to direct Homepage sucesssfully");
 	    } catch (InterruptedException e) {
 	        Thread.currentThread().interrupt();
 	        System.out.println("Thread interrupted while sleeping.");
