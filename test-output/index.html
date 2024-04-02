@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,8 +21,7 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
@@ -93,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +103,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.gayu.Gayathri.Shortcutkey_Edit" class="method navigator-link" hash-for-method="Direct_Draw_page">Direct_Draw_page</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.gayu.Gayathri.search_validating" class="method navigator-link" hash-for-method="Direct_Draw_page">Direct_Draw_page</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.gayu.Gayathri.Shortcutkey_Edit" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.gayu.Gayathri.search_validating" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.gayu.Gayathri.Shortcutkey_Edit" class="method navigator-link" hash-for-method="table">table</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.gayu.Gayathri.search_validating" class="method navigator-link" hash-for-method="search">search</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.gayu.Gayathri.search_validating" class="method navigator-link" hash-for-method="table">table</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,7 +136,7 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.gayu.Gayathri.Shortcutkey_Edit</span>
+              <span class="class-name">com.gayu.Gayathri.search_validating</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -151,6 +155,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="search">
+                  </a> <!-- search -->
+                  <span class="method-name">search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="table">
                   </a> <!-- table -->
                   <span class="method-name">table</span>
@@ -161,7 +172,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--1675368394/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse-1610972330/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -170,7 +181,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.gayu.Gayathri.Shortcutkey_Edit&quot;/&gt;
+      &lt;class name=&quot;com.gayu.Gayathri.search_validating&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -210,24 +221,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Login')
-data.setCell(0, 2, 'com.gayu.Gayathri.Shortcutkey_Edit')
-data.setCell(0, 3, 23978);
+data.setCell(0, 2, 'com.gayu.Gayathri.search_validating')
+data.setCell(0, 3, 27546);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'table')
-data.setCell(1, 2, 'com.gayu.Gayathri.Shortcutkey_Edit')
-data.setCell(1, 3, 9038);
+data.setCell(1, 2, 'com.gayu.Gayathri.search_validating')
+data.setCell(1, 3, 8345);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'Direct_Draw_page')
-data.setCell(2, 2, 'com.gayu.Gayathri.Shortcutkey_Edit')
-data.setCell(2, 3, 4092);
+data.setCell(2, 2, 'com.gayu.Gayathri.search_validating')
+data.setCell(2, 3, 5697);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'search')
+data.setCell(3, 2, 'com.gayu.Gayathri.search_validating')
+data.setCell(3, 3, 237);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 41 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -253,26 +268,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.gayu.Gayathri.Shortcutkey_Edit</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.gayu.Gayathri.search_validating</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">Login</span>
-                <span class="method-start">1804 ms</span>
+                <span class="method-start">1058 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">table</span>
-                <span class="method-start">25790 ms</span>
+                <span class="method-start">28607 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Direct_Draw_page</span>
-                <span class="method-start">34830 ms</span>
+                <span class="method-start">36953 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">search</span>
+                <span class="method-start">42652 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">38927 ms</span>
+                <span class="method-start">42891 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

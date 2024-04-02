@@ -2,8 +2,8 @@ package com.gayu.Gayathri;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.NoSuchElementException;
 import java.util.Set;
-import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -13,12 +13,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ShortcutKey_Homepage {
+import junit.framework.Assert;
+
+public class Add_shortcutkey {
 	private RemoteWebDriver driver;
 	@BeforeTest
 	public void setup() throws MalformedURLException 
@@ -102,7 +103,7 @@ public class ShortcutKey_Homepage {
 				break;
 			}}}
 	@Test(priority=3)
-	public void Direct_drawpage() {
+	public void Direct_Draw_page() throws InterruptedException {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 			Actions actions = new Actions(driver);
@@ -127,40 +128,65 @@ public class ShortcutKey_Homepage {
 	    } catch (Exception e) {
 	        System.out.println("An error occurred: " + e.getMessage());
 	    }
-		try {
-		    WebDriverWait wait = new WebDriverWait(driver, 50);
-		    Actions actions = new Actions(driver);
-		    actions.keyDown(Keys.SHIFT) 
-		           .sendKeys("p")  
-		           .keyUp(Keys.SHIFT)  
-		           .build()
-		           .perform();
-		    
-		    WebElement selectedRegion = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()=' -1 : Not Available-NA ']")));
-		    String actualText = selectedRegion.getText();           
-		    String expectedText = "-1 : Not Available-NA";
-		    
-		    Assert.assertEquals(actualText, expectedText, "The retrieved text does not match the expected text.");	        
-		    
-		    Thread.sleep(3000);	        
-		    
-		    System.out.println("--------------------------*****************-----------------------");
-		    System.out.println("Assertion passed: The retrieved text matches the expected text.");
-		    
-		    System.out.println("--------------------------*****************-----------------------");
-		    System.out.println("The shortcut keys came back to the Home page sucessfully");
-		} catch (InterruptedException e) {
-		    Thread.currentThread().interrupt();
-		    System.out.println("Thread interrupted while sleeping.");
-		} catch (AssertionError e) {
-		    System.out.println("Assertion failed: " + e.getMessage());
-		} catch (Exception e) {
-		    System.out.println("An error occurred: " + e.getMessage());
-		}}
+	try {
+        WebDriverWait wait = new WebDriverWait(driver, 50);
+        WebElement annotation = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nb-accordion-item-header[text()='Annotation']")));
+       annotation.click();
+        Thread.sleep(3000);
+        System.out.println("-------------------------------------------------");
+        System.out.println("The annotation incon is clicked");
+    } catch (Exception e) {
+        System.out.println("The annotation incon is not clicked");
+    }
+	try {
+	Actions actions = new Actions(driver);
+    actions.keyDown(Keys.ALT) 
+           .sendKeys("v")  
+           .keyUp(Keys.ALT)  
+           .build()
+           .perform();
+    System.out.println("Action executed successfully!");
+	} catch (NoSuchElementException e) {
+	    System.out.println("Element not found: " + e.getMessage());
+	} catch (Exception e) {
+	    System.out.println("Error executing action: " + e.getMessage());
+	}
+	try {
+        WebDriverWait wait = new WebDriverWait(driver, 50);
+        WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search']")));
+      search.sendKeys("brain");
+        Thread.sleep(3000);
+        System.out.println("-------------------------------------------------");
+        System.out.println("The search icon is clicked");
+    } catch (Exception e) {
+        System.out.println("The search icon is not clicked");
+    }
+	try {
+        WebDriverWait wait = new WebDriverWait(driver, 50);
+        WebElement Brain_id= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='10155_anchor']")));
+        Thread.sleep(3000);
+        Brain_id.click();
+        System.out.println("-------------------------------------------------");
+        System.out.println("The Brain id is selected sucessfully");
+    } catch (Exception e) {
+        System.out.println("The Brain id is selection is failure");
+    }
+
+    WebElement canvas = driver.findElement(By.xpath("//canvas"));
+    Thread.sleep(3000);
+    Actions actions1 = new Actions(driver);
+    int centerX = 0; 
+    int centerY = 0; 
+
+    
+    actions1.moveToElement(canvas, centerX, centerY)
+            .click()
+            .perform();
+	}
+	
 		@AfterTest
 		public void tearDown() {
 			if (driver != null) {
 				driver.quit();
 			}}
-	}
-
+}

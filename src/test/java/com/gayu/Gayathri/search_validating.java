@@ -2,8 +2,8 @@ package com.gayu.Gayathri;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.NoSuchElementException;
 import java.util.Set;
-import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -13,12 +13,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ShortcutKey_Homepage {
+import junit.framework.Assert;
+
+public class search_validating {
 	private RemoteWebDriver driver;
 	@BeforeTest
 	public void setup() throws MalformedURLException 
@@ -102,65 +103,92 @@ public class ShortcutKey_Homepage {
 				break;
 			}}}
 	@Test(priority=3)
-	public void Direct_drawpage() {
+	public void Direct_Draw_page() throws InterruptedException {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 			Actions actions = new Actions(driver);
-	        actions.keyDown(Keys.SHIFT) 
-	               .sendKeys("o")  
-	               .keyUp(Keys.SHIFT)  
-	               .build()
-	               .perform();
-	        WebElement LockedPerson = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Software Team']")));
-	        String actualText = LockedPerson.getText();           
-	        String expectedText = "Software Team";
-	        Assert.assertEquals(actualText, expectedText, "The retrieved text does not match the expected text.");	        
-	        Thread.sleep(3000);	        
-	        System.out.println("--------------------------*****************-----------------------");
-	        System.out.println("Assertion passed: The retrieved text matches the expected text.");
-	        System.out.println("The shorcutkeys go to direct Homepage sucesssfully");
-	    } catch (InterruptedException e) {
-	        Thread.currentThread().interrupt();
-	        System.out.println("Thread interrupted while sleeping.");
-	    } catch (AssertionError e) {
-	        System.out.println("Assertion failed: " + e.getMessage());
-	    } catch (Exception e) {
-	        System.out.println("An error occurred: " + e.getMessage());
-	    }
-		try {
-		    WebDriverWait wait = new WebDriverWait(driver, 50);
-		    Actions actions = new Actions(driver);
-		    actions.keyDown(Keys.SHIFT) 
-		           .sendKeys("p")  
-		           .keyUp(Keys.SHIFT)  
-		           .build()
-		           .perform();
-		    
-		    WebElement selectedRegion = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()=' -1 : Not Available-NA ']")));
-		    String actualText = selectedRegion.getText();           
-		    String expectedText = "-1 : Not Available-NA";
-		    
-		    Assert.assertEquals(actualText, expectedText, "The retrieved text does not match the expected text.");	        
-		    
-		    Thread.sleep(3000);	        
-		    
-		    System.out.println("--------------------------*****************-----------------------");
-		    System.out.println("Assertion passed: The retrieved text matches the expected text.");
-		    
-		    System.out.println("--------------------------*****************-----------------------");
-		    System.out.println("The shortcut keys came back to the Home page sucessfully");
-		} catch (InterruptedException e) {
-		    Thread.currentThread().interrupt();
-		    System.out.println("Thread interrupted while sleeping.");
-		} catch (AssertionError e) {
-		    System.out.println("Assertion failed: " + e.getMessage());
+			actions.keyDown(Keys.SHIFT) 
+			.sendKeys("o")  
+			.keyUp(Keys.SHIFT)  
+			.build()
+			.perform();
+
+			System.out.println("Action executed successfully!");
+
+		} catch (NoSuchElementException e) {
+			System.out.println("Element not found: " + e.getMessage());
 		} catch (Exception e) {
-		    System.out.println("An error occurred: " + e.getMessage());
+			System.out.println("Error executing action: " + e.getMessage());
+		}
+
+
+
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+
+			// Click on the annotation icon
+			WebElement annotation = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nb-accordion-item-header[text()='Annotation']")));
+			annotation.click();
+
+			System.out.println("-------------------------------------------------");
+			System.out.println("The annotation icon is clicked");
+
+		} catch (Exception e) {
+			System.out.println("The annotation icon is not clicked");
+		}
+
+		try {
+			Actions actions = new Actions(driver);
+
+			// Press ALT + V
+			actions.keyDown(Keys.ALT)
+			.sendKeys("v")
+			.keyUp(Keys.ALT)
+			.build()
+			.perform();
+			System.out.println("-------------------------------------------------");
+			System.out.println("Action executed successfully!");
+
+		} catch (NoSuchElementException e) {
+			System.out.println("Element not found: " + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Error executing action: " + e.getMessage());
+		}
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Search']")));
+			search.sendKeys("brain");
+			Thread.sleep(3000);
+			System.out.println("-------------------------------------------------");
+			System.out.println("The search icon is clicked");
+		} catch (Exception e) {
+			System.out.println("The search icon is not clicked");
 		}}
-		@AfterTest
-		public void tearDown() {
-			if (driver != null) {
-				driver.quit();
-			}}
-	}
+	@Test (priority=4)
+	public void search() {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			WebElement brainId = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='10155_anchor']")));
+			brainId.click();
+			String t1 = brainId.getText();
+			String expectedText = "brain";
+			Assert.assertEquals(t1, expectedText);           
+			System.out.println("Assertion passed: " + t1 + " matches the expected value.");
+		} catch (AssertionError e) {
+			System.out.println("Assertion failed: " + e.getMessage());
+			// Re-throw the AssertionError
+			throw e;
+		} catch (Exception e) {
+			System.out.println("An error occurred: " + e.getMessage());
+			// Re-throw the Exception
+			throw e;
+		}
+	}   
+
+	@AfterTest
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}}
+}
 

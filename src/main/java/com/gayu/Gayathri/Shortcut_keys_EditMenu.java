@@ -3,7 +3,6 @@ package com.gayu.Gayathri;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
-import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -18,13 +17,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ShortcutKey_Homepage {
+public class Shortcut_keys_EditMenu {
 	private RemoteWebDriver driver;
 	@BeforeTest
 	public void setup() throws MalformedURLException 
 	{
 		DesiredCapabilities dc = DesiredCapabilities.chrome();
-		URL url = new URL("http://172.12.20.99:4443/wd/hub");
+		URL url = new URL("http://172.12.20.99:4444/wd/hub");
 		driver = new RemoteWebDriver(url, dc);
 	}
 	@Test(priority=1)
@@ -107,18 +106,18 @@ public class ShortcutKey_Homepage {
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 			Actions actions = new Actions(driver);
 	        actions.keyDown(Keys.SHIFT) 
-	               .sendKeys("o")  
+	               .sendKeys("m")  
 	               .keyUp(Keys.SHIFT)  
 	               .build()
 	               .perform();
-	        WebElement LockedPerson = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Software Team']")));
-	        String actualText = LockedPerson.getText();           
-	        String expectedText = "Software Team";
+	        WebElement Filename = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()=' B_54_MTB12-SL_70-ST_NISL-SE_286_compressed.jp2 ']")));
+	        String actualText = Filename.getText();           
+	        String expectedText = " B_54_MTB12-SL_70-ST_NISL-SE_286_compressed.jp2 ";
 	        Assert.assertEquals(actualText, expectedText, "The retrieved text does not match the expected text.");	        
 	        Thread.sleep(3000);	        
 	        System.out.println("--------------------------*****************-----------------------");
 	        System.out.println("Assertion passed: The retrieved text matches the expected text.");
-	        System.out.println("The shorcutkeys go to direct Homepage sucesssfully");
+	        System.out.println("The shorcutkeys go to direct Edit page sucesssfully");
 	    } catch (InterruptedException e) {
 	        Thread.currentThread().interrupt();
 	        System.out.println("Thread interrupted while sleeping.");
@@ -131,7 +130,7 @@ public class ShortcutKey_Homepage {
 		    WebDriverWait wait = new WebDriverWait(driver, 50);
 		    Actions actions = new Actions(driver);
 		    actions.keyDown(Keys.SHIFT) 
-		           .sendKeys("p")  
+		           .sendKeys("m")  
 		           .keyUp(Keys.SHIFT)  
 		           .build()
 		           .perform();
@@ -163,4 +162,5 @@ public class ShortcutKey_Homepage {
 				driver.quit();
 			}}
 	}
+
 
