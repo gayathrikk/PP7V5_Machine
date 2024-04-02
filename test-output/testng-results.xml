@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-02T12:35:31 IST" name="Default suite" finished-at="2024-04-02T12:36:14 IST" duration-ms="43046">
+  <suite started-at="2024-04-02T12:58:59 IST" name="Default suite" finished-at="2024-04-02T12:59:41 IST" duration-ms="42524">
     <groups>
     </groups>
-    <test started-at="2024-04-02T12:35:31 IST" name="Default test" finished-at="2024-04-02T12:36:14 IST" duration-ms="43046">
+    <test started-at="2024-04-02T12:58:59 IST" name="Default test" finished-at="2024-04-02T12:59:41 IST" duration-ms="42524">
       <class name="com.gayu.Gayathri.search_validating">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:35:31 IST" name="setup" finished-at="2024-04-02T12:35:32 IST" duration-ms="1037" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:58:59 IST" name="setup" finished-at="2024-04-02T12:59:01 IST" duration-ms="2019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:35:32 IST" name="Login" finished-at="2024-04-02T12:35:59 IST" duration-ms="27546" status="PASS">
+        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:01 IST" name="Login" finished-at="2024-04-02T12:59:27 IST" duration-ms="26014" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:35:59 IST" name="table" finished-at="2024-04-02T12:36:08 IST" duration-ms="8345" status="PASS">
+        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:27 IST" name="table" finished-at="2024-04-02T12:59:35 IST" duration-ms="8255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- table -->
-        <test-method signature="Direct_Draw_page()[pri:3, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:36:08 IST" name="Direct_Draw_page" finished-at="2024-04-02T12:36:14 IST" duration-ms="5697" status="PASS">
+        <test-method signature="Direct_Draw_page()[pri:3, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:35 IST" name="Direct_Draw_page" finished-at="2024-04-02T12:59:41 IST" duration-ms="5605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Direct_Draw_page -->
-        <test-method signature="search()[pri:4, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:36:14 IST" name="search" finished-at="2024-04-02T12:36:14 IST" duration-ms="237" status="PASS">
+        <test-method signature="search()[pri:4, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:41 IST" name="search" finished-at="2024-04-02T12:59:41 IST" duration-ms="436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:36:14 IST" name="tearDown" finished-at="2024-04-02T12:36:14 IST" duration-ms="145" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:41 IST" name="tearDown" finished-at="2024-04-02T12:59:41 IST" duration-ms="156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
