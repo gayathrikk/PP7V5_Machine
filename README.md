@@ -11,3 +11,4 @@
 # Atlas_shortcut_keys_Edit
 # Atlas_shortcut_keys_DirectHomePage
 # Atlas_shortcut_keys_DirectHomePage
+# Atlas_Search
