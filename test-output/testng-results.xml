@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-02T12:58:59 IST" name="Default suite" finished-at="2024-04-02T12:59:41 IST" duration-ms="42524">
+  <suite started-at="2024-04-03T12:28:47 IST" name="Default suite" finished-at="2024-04-03T12:30:17 IST" duration-ms="89411">
     <groups>
     </groups>
-    <test started-at="2024-04-02T12:58:59 IST" name="Default test" finished-at="2024-04-02T12:59:41 IST" duration-ms="42524">
-      <class name="com.gayu.Gayathri.search_validating">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:58:59 IST" name="setup" finished-at="2024-04-02T12:59:01 IST" duration-ms="2019" status="PASS">
+    <test started-at="2024-04-03T12:28:47 IST" name="Default test" finished-at="2024-04-03T12:30:17 IST" duration-ms="89411">
+      <class name="com.gayu.Gayathri.ShortcutKey_add">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:28:47 IST" name="setup" finished-at="2024-04-03T12:28:48 IST" duration-ms="1196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:01 IST" name="Login" finished-at="2024-04-02T12:59:27 IST" duration-ms="26014" status="PASS">
+        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:28:49 IST" name="Login" finished-at="2024-04-03T12:29:16 IST" duration-ms="27240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:27 IST" name="table" finished-at="2024-04-02T12:59:35 IST" duration-ms="8255" status="PASS">
+        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:29:16 IST" name="table" finished-at="2024-04-03T12:29:25 IST" duration-ms="8816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- table -->
-        <test-method signature="Direct_Draw_page()[pri:3, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:35 IST" name="Direct_Draw_page" finished-at="2024-04-02T12:59:41 IST" duration-ms="5605" status="PASS">
+        <test-method signature="Direct_Draw_page()[pri:3, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:29:25 IST" name="Direct_Draw_page" finished-at="2024-04-03T12:29:30 IST" duration-ms="5842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Direct_Draw_page -->
-        <test-method signature="search()[pri:4, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:41 IST" name="search" finished-at="2024-04-02T12:59:41 IST" duration-ms="436" status="PASS">
+        <test-method signature="search()[pri:4, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:29:30 IST" name="search" finished-at="2024-04-03T12:29:38 IST" duration-ms="7157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.search_validating@60099951]" started-at="2024-04-02T12:59:41 IST" name="tearDown" finished-at="2024-04-02T12:59:41 IST" duration-ms="156" status="PASS">
+        <test-method signature="drawSquareInMiddle()[pri:5, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:29:38 IST" name="drawSquareInMiddle" finished-at="2024-04-03T12:29:52 IST" duration-ms="14895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- drawSquareInMiddle -->
+        <test-method signature="selectRegion()[pri:6, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:29:52 IST" name="selectRegion" finished-at="2024-04-03T12:30:04 IST" duration-ms="11322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectRegion -->
+        <test-method signature="DeleteRegion()[pri:7, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:30:04 IST" name="DeleteRegion" finished-at="2024-04-03T12:30:11 IST" duration-ms="6921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteRegion -->
+        <test-method signature="Save_Del_region()[pri:8, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:30:11 IST" name="Save_Del_region" finished-at="2024-04-03T12:30:17 IST" duration-ms="5797" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Save_Del_region -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.ShortcutKey_add@55a147cc]" started-at="2024-04-03T12:30:17 IST" name="tearDown" finished-at="2024-04-03T12:30:17 IST" duration-ms="169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gayu.Gayathri.search_validating -->
+      </class> <!-- com.gayu.Gayathri.ShortcutKey_add -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

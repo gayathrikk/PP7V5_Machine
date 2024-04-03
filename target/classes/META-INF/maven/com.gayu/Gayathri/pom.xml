@@ -70,7 +70,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration>
-            <test>com.gayu.Gayathri.search_validating</test>
+            <test>com.gayu.Gayathri.ShortcutKey_add</test>
           </configuration>
         </plugin>
       </plugins>

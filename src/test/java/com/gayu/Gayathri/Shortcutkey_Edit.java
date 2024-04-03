@@ -22,25 +22,28 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Shortcutkey_Edit {
 	private RemoteWebDriver driver;
+
 	@BeforeTest
-	public void setup() throws MalformedURLException 
-	{
+	public void setup() throws MalformedURLException {
 		DesiredCapabilities dc = DesiredCapabilities.chrome();
 		URL url = new URL("http://172.12.20.99:4444/wd/hub");
 		driver = new RemoteWebDriver(url, dc);
 	}
-	@Test(priority=1)
+
+	@Test(priority = 1)
 	public void Login() throws InterruptedException {
 		driver.get("http://apollo2.humanbrain.in/");
 		driver.manage().window().maximize();
 		System.out.println("The server is Opened sucessfully");
 		WebDriverWait wait = new WebDriverWait(driver, 50);
-		WebElement viewerSectionLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@class, 'ng-tns-c93-3')]")));
+		WebElement viewerSectionLink = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@class, 'ng-tns-c93-3')]")));
 		viewerSectionLink.click();
 		System.out.println("The Viewer Icon is clicked");
 		String parentWindow = driver.getWindowHandle();
-		WebDriverWait wait1= new WebDriverWait(driver, 20);
-		WebElement login = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()=' Log In ']")));
+		WebDriverWait wait1 = new WebDriverWait(driver, 20);
+		WebElement login = wait1
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()=' Log In ']")));
 		login.click();
 		System.out.println("The login Button is clicked");
 		Thread.sleep(4000);
@@ -52,32 +55,36 @@ public class Shortcutkey_Edit {
 			}
 		}
 		Thread.sleep(4000);
-		WebDriverWait wait2 = new WebDriverWait(driver,20);
-		WebElement  emailInput = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='email']")));
+		WebDriverWait wait2 = new WebDriverWait(driver, 20);
+		WebElement emailInput = wait2
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='email']")));
 		emailInput.sendKeys("softwareteam45@gmail.com");
 		System.out.println("Mail I'd is entered");
-		WebDriverWait wait3 = new WebDriverWait(driver,20);
-		WebElement  Next = wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Next']")));
+		WebDriverWait wait3 = new WebDriverWait(driver, 20);
+		WebElement Next = wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Next']")));
 		Next.click();
 		System.out.println("The Next Button is clicked");
-		WebDriverWait wait4 = new WebDriverWait(driver,20);
-		WebElement  PasswordInput = wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='password']")));
+		WebDriverWait wait4 = new WebDriverWait(driver, 20);
+		WebElement PasswordInput = wait4
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='password']")));
 		PasswordInput.sendKeys("Health#123");
 		System.out.println("Password is entered");
-		WebDriverWait wait5 = new WebDriverWait(driver,20);
-		WebElement  Next2 = wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Next']")));
-		Next2.click();		
+		WebDriverWait wait5 = new WebDriverWait(driver, 20);
+		WebElement Next2 = wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Next']")));
+		Next2.click();
 		System.out.println("The Next Button is clicked");
 		Thread.sleep(5000);
 		driver.switchTo().window(parentWindow);
 		Thread.sleep(5000);
 	}
+
 	@Test(priority = 2)
 	public void table() throws InterruptedException {
 		String parentWindow = driver.getWindowHandle();
 		try {
 			WebDriverWait wait6 = new WebDriverWait(driver, 30);
-			WebElement table1 = wait6.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Search tags']")));
+			WebElement table1 = wait6
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Search tags']")));
 			table1.sendKeys("TestM\n");
 			Thread.sleep(3000);
 			System.out.println("--------------------------*****************-----------------------");
@@ -88,7 +95,8 @@ public class Shortcutkey_Edit {
 		}
 		try {
 			WebDriverWait wait7 = new WebDriverWait(driver, 30);
-			WebElement table2 = wait7.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"column\"]/ngx-series-set-comp/div/ngx-explore-comp/nb-layout/div[1]/div/div/div/div/nb-layout-column[2]/nb-card/nb-card-body/div[2]/div/nb-card/nb-card-footer/nb-icon[1]/img")));
+			WebElement table2 = wait7.until(ExpectedConditions.elementToBeClickable(By.xpath(
+					"//*[@id=\"column\"]/ngx-series-set-comp/div/ngx-explore-comp/nb-layout/div[1]/div/div/div/div/nb-layout-column[2]/nb-card/nb-card-body/div[2]/div/nb-card/nb-card-footer/nb-icon[1]/img")));
 			table2.click();
 			System.out.println("--------------------------*****************-----------------------");
 			System.out.println("The Altas Editor is clicked");
@@ -102,36 +110,39 @@ public class Shortcutkey_Edit {
 			if (!window.equals(parentWindow)) {
 				driver.switchTo().window(window);
 				break;
-			}}}
-	@Test(priority=3)
+			}
+		}
+	}
+
+	@Test(priority = 3)
 	public void Direct_Draw_page() {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 			Actions actions = new Actions(driver);
-	        actions.keyDown(Keys.SHIFT) 
-	               .sendKeys("o")  
-	               .keyUp(Keys.SHIFT)  
-	               .build()
-	               .perform();
-	        WebElement LockedPerson = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Software Team']")));
-	        String actualText = LockedPerson.getText();           
-	        String expectedText = "Software Team";
-	        Assert.assertEquals(actualText, expectedText, "The retrieved text does not match the expected text.");	        
-	        Thread.sleep(3000);	        
-	        System.out.println("--------------------------*****************-----------------------");
-	        System.out.println("Assertion passed: The retrieved text matches the expected text.");
-	        System.out.println("The shorcutkeys go to direct Homepage sucesssfully");
-	    } catch (InterruptedException e) {
-	        Thread.currentThread().interrupt();
-	        System.out.println("Thread interrupted while sleeping.");
-	    } catch (AssertionError e) {
-	        System.out.println("Assertion failed: " + e.getMessage());
-	    } catch (Exception e) {
-	        System.out.println("An error occurred: " + e.getMessage());
-	    }}
-		@AfterTest
-		public void tearDown() {
-			if (driver != null) {
-				driver.quit();
-			}}
+			actions.keyDown(Keys.SHIFT).sendKeys("o").keyUp(Keys.SHIFT).build().perform();
+			WebElement LockedPerson = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Software Team']")));
+			String actualText = LockedPerson.getText();
+			String expectedText = "Software Team";
+			Assert.assertEquals(actualText, expectedText, "The retrieved text does not match the expected text.");
+			Thread.sleep(3000);
+			System.out.println("--------------------------*****************-----------------------");
+			System.out.println("Assertion passed: The retrieved text matches the expected text.");
+			System.out.println("The shorcutkeys go to direct Homepage sucesssfully");
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			System.out.println("Thread interrupted while sleeping.");
+		} catch (AssertionError e) {
+			System.out.println("Assertion failed: " + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("An error occurred: " + e.getMessage());
+		}
 	}
+
+	@AfterTest
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+}
