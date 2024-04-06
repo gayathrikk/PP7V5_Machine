@@ -5,22 +5,19 @@ import java.net.URL;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import junit.framework.Assert;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
-
-public class Shortcutkey_Edit {
+public class Direct_DrawPage {
 	private RemoteWebDriver driver;
 
 	@BeforeTest
@@ -127,7 +124,7 @@ public class Shortcutkey_Edit {
 			Thread.sleep(3000);
 			System.out.println("--------------------------*****************-----------------------");
 			System.out.println("Assertion passed: The retrieved text matches the expected text.");
-			System.out.println("The shorcutkeys go to direct Homepage sucesssfully");
+			System.out.println("The shorcutkeys go to direct Draw page sucesssfully");
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 			System.out.println("Thread interrupted while sleeping.");
@@ -135,7 +132,9 @@ public class Shortcutkey_Edit {
 			System.out.println("Assertion failed: " + e.getMessage());
 		} catch (Exception e) {
 			System.out.println("An error occurred: " + e.getMessage());
-		}}
+		}	
+	}
+
 	@AfterTest
 	public void tearDown() {
 		if (driver != null) {
@@ -143,3 +142,5 @@ public class Shortcutkey_Edit {
 		}
 	}
 }
+
+

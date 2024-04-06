@@ -118,8 +118,7 @@ public class ShortcutKey_Homepage {
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 			Actions actions = new Actions(driver);
 			actions.keyDown(Keys.SHIFT).sendKeys("o").keyUp(Keys.SHIFT).build().perform();
-			WebElement LockedPerson = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Software Team']")));
+			WebElement LockedPerson = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Software Team']")));
 			String actualText = LockedPerson.getText();
 			String expectedText = "Software Team";
 			Assert.assertEquals(actualText, expectedText, "The retrieved text does not match the expected text.");
