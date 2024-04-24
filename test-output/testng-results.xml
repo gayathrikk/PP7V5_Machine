@@ -1,45 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-10T16:10:48 IST" name="Default suite" finished-at="2024-04-10T16:12:21 IST" duration-ms="92908">
+  <suite started-at="2024-04-24T15:18:11 IST" name="Default suite" finished-at="2024-04-24T15:19:11 IST" duration-ms="60484">
     <groups>
     </groups>
-    <test started-at="2024-04-10T16:10:48 IST" name="Default test" finished-at="2024-04-10T16:12:21 IST" duration-ms="92908">
-      <class name="com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits@368247b9]" started-at="2024-04-10T16:10:48 IST" name="setup" finished-at="2024-04-10T16:10:51 IST" duration-ms="2235" status="PASS">
+    <test started-at="2024-04-24T15:18:11 IST" name="Default test" finished-at="2024-04-24T15:19:11 IST" duration-ms="60484">
+      <class name="com.gayu.Gayathri.Contributor">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:11 IST" name="setup" finished-at="2024-04-24T15:18:12 IST" duration-ms="1579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits@368247b9]" started-at="2024-04-10T16:10:51 IST" name="Login" finished-at="2024-04-10T16:11:18 IST" duration-ms="27132" status="PASS">
+        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:12 IST" name="Login" finished-at="2024-04-24T15:18:45 IST" duration-ms="33056" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits@368247b9]" started-at="2024-04-10T16:11:18 IST" name="table" finished-at="2024-04-10T16:11:26 IST" duration-ms="8207" status="PASS">
+        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:46 IST" name="table" finished-at="2024-04-24T15:18:55 IST" duration-ms="9015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- table -->
-        <test-method signature="Direct_Draw_page()[pri:3, instance:com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits@368247b9]" started-at="2024-04-10T16:11:26 IST" name="Direct_Draw_page" finished-at="2024-04-10T16:11:35 IST" duration-ms="8904" status="PASS">
+        <test-method signature="Direct_Draw_page()[pri:3, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:55 IST" name="Direct_Draw_page" finished-at="2024-04-24T15:18:58 IST" duration-ms="3663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Direct_Draw_page -->
-        <test-method signature="search()[pri:4, instance:com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits@368247b9]" started-at="2024-04-10T16:11:35 IST" name="search" finished-at="2024-04-10T16:11:41 IST" duration-ms="6458" status="PASS">
+        <test-method signature="select_contributor()[pri:4, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:58 IST" name="select_contributor" finished-at="2024-04-24T15:19:11 IST" duration-ms="12991" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search -->
-        <test-method signature="drawSquareInMiddle()[pri:5, instance:com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits@368247b9]" started-at="2024-04-10T16:11:41 IST" name="drawSquareInMiddle" finished-at="2024-04-10T16:12:02 IST" duration-ms="20519" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- drawSquareInMiddle -->
-        <test-method signature="Saved()[pri:6, instance:com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits@368247b9]" started-at="2024-04-10T16:12:02 IST" name="Saved" finished-at="2024-04-10T16:12:21 IST" duration-ms="19171" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Saved -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits@368247b9]" started-at="2024-04-10T16:12:21 IST" name="tearDown" finished-at="2024-04-10T16:12:21 IST" duration-ms="213" status="PASS">
+        </test-method> <!-- select_contributor -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:19:11 IST" name="tearDown" finished-at="2024-04-24T15:19:11 IST" duration-ms="129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gayu.Gayathri.Atlas_shortcutkey_Editing$ShortcutKey_Edits -->
+      </class> <!-- com.gayu.Gayathri.Contributor -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
