@@ -3,19 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.gayu.Gayathri.ShortcutKey_TRS$ShortcutKey_add">
+      <class name="com.gayu.Gayathri.DashBoard_Numbers">
         <methods>
-          <include name="DeleteRegion"/>
-          <include name="search"/>
-          <include name="table"/>
-          <include name="Login"/>
           <include name="setup"/>
-          <include name="Save_Del_region"/>
-          <include name="drawSquareInMiddle"/>
-          <include name="Direct_Draw_page"/>
-          <include name="TRS"/>
+          <include name="tearDown"/>
+          <include name="Cryo_blocking"/>
         </methods>
-      </class> <!-- com.gayu.Gayathri.ShortcutKey_TRS$ShortcutKey_add -->
+      </class> <!-- com.gayu.Gayathri.DashBoard_Numbers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

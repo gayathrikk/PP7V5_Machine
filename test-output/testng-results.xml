@@ -1,37 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-24T15:18:11 IST" name="Default suite" finished-at="2024-04-24T15:19:11 IST" duration-ms="60484">
+  <suite started-at="2024-05-03T12:26:40 IST" name="Default suite" finished-at="2024-05-03T12:34:33 IST" duration-ms="473123">
     <groups>
     </groups>
-    <test started-at="2024-04-24T15:18:11 IST" name="Default test" finished-at="2024-04-24T15:19:11 IST" duration-ms="60484">
-      <class name="com.gayu.Gayathri.Contributor">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:11 IST" name="setup" finished-at="2024-04-24T15:18:12 IST" duration-ms="1579" status="PASS">
+    <test started-at="2024-05-03T12:26:40 IST" name="Default test" finished-at="2024-05-03T12:34:33 IST" duration-ms="473123">
+      <class name="com.gayu.Gayathri.DashBoard_Numbers">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:26:40 IST" name="setup" finished-at="2024-05-03T12:26:43 IST" duration-ms="2997" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:12 IST" name="Login" finished-at="2024-04-24T15:18:45 IST" duration-ms="33056" status="PASS">
+        <test-method signature="Login()[pri:1, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:26:43 IST" name="Login" finished-at="2024-05-03T12:27:21 IST" duration-ms="38054" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="table()[pri:2, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:46 IST" name="table" finished-at="2024-04-24T15:18:55 IST" duration-ms="9015" status="PASS">
+        <test-method signature="table1()[pri:2, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:27:21 IST" name="table1" finished-at="2024-05-03T12:27:57 IST" duration-ms="36385" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- table -->
-        <test-method signature="Direct_Draw_page()[pri:3, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:55 IST" name="Direct_Draw_page" finished-at="2024-04-24T15:18:58 IST" duration-ms="3663" status="PASS">
+        </test-method> <!-- table1 -->
+        <test-method signature="OrganExtraction()[pri:3, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:27:57 IST" name="OrganExtraction" finished-at="2024-05-03T12:28:49 IST" duration-ms="51958" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Direct_Draw_page -->
-        <test-method signature="select_contributor()[pri:4, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:18:58 IST" name="select_contributor" finished-at="2024-04-24T15:19:11 IST" duration-ms="12991" status="PASS">
+        </test-method> <!-- OrganExtraction -->
+        <test-method signature="cryo_Protection()[pri:4, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:28:49 IST" name="cryo_Protection" finished-at="2024-05-03T12:29:41 IST" duration-ms="51968" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_contributor -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.Contributor@60099951]" started-at="2024-04-24T15:19:11 IST" name="tearDown" finished-at="2024-04-24T15:19:11 IST" duration-ms="129" status="PASS">
+        </test-method> <!-- cryo_Protection -->
+        <test-method signature="Cryo_blocking()[pri:5, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:29:41 IST" name="Cryo_blocking" finished-at="2024-05-03T12:30:50 IST" duration-ms="69174" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Failed to click close button 23]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Failed to click close button 23
+at com.gayu.Gayathri.DashBoard_Numbers.Cryo_blocking(DashBoard_Numbers.java:668)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//button[@aria-disabled='false'])[7] (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.gayu.Gayathri.DashBoard_Numbers.Cryo_blocking(DashBoard_Numbers.java:659)
+... 28 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//button[@aria-disabled='false'])[7]"}
+  (Session info: chrome=120.0.6099.109)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'vivobook-asuslaptop-x512flc-x512fl', ip: '172.16.21.143', os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-36-generic', java.version: '17.0.7'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:39655}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.24.0.4:4444/sessio..., se:cdpVersion: 120.0.6099.109, se:vnc: ws://172.24.0.4:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.24.0.4:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c8e68c7e967002080cabbb88d45e018
+*** Element info: {Using=xpath, value=(//button[@aria-disabled='false'])[7]}
+at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cryo_blocking -->
+        <test-method signature="MRI_Skull_stripping()[pri:5, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:30:50 IST" name="MRI_Skull_stripping" finished-at="2024-05-03T12:31:42 IST" duration-ms="52126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MRI_Skull_stripping -->
+        <test-method signature="Imaging()[pri:6, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:31:42 IST" name="Imaging" finished-at="2024-05-03T12:32:41 IST" duration-ms="59132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Imaging -->
+        <test-method signature="Manual_Stacking()[pri:7, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:32:41 IST" name="Manual_Stacking" finished-at="2024-05-03T12:33:37 IST" duration-ms="55622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manual_Stacking -->
+        <test-method signature="Atlas_Creation()[pri:8, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:33:37 IST" name="Atlas_Creation" finished-at="2024-05-03T12:34:32 IST" duration-ms="54945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Atlas_Creation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gayu.Gayathri.DashBoard_Numbers@71ba6d4e]" started-at="2024-05-03T12:34:32 IST" name="tearDown" finished-at="2024-05-03T12:34:33 IST" duration-ms="716" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gayu.Gayathri.Contributor -->
+      </class> <!-- com.gayu.Gayathri.DashBoard_Numbers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

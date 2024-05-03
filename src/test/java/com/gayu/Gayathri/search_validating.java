@@ -94,7 +94,7 @@ public class search_validating {
 		try {
 			WebDriverWait wait7 = new WebDriverWait(driver, 30);
 			WebElement table2 = wait7.until(ExpectedConditions.elementToBeClickable(By.xpath(
-					"//*[@id=\"column\"]/ngx-series-set-comp/div/ngx-explore-comp/nb-layout/div[1]/div/div/div/div/nb-layout-column[2]/nb-card/nb-card-body/div[2]/div/nb-card/nb-card-footer/nb-icon[1]/img")));
+					"/html/body/ngx-app/ngx-annotation/nb-layout/div[1]/div/div/div/div/nb-layout-column/ngx-series-set-comp/div/ngx-explore-comp/nb-layout/div/div/div/div/div/nb-layout-column[2]/nb-card/nb-card-body/div/div[2]/div/nb-card/nb-card-footer/nb-icon[1]/img")));
 			table2.click();
 			System.out.println("--------------------------*****************-----------------------");
 			System.out.println("The Altas Editor is clicked");
