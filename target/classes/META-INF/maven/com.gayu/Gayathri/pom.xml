@@ -70,7 +70,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration>
-            <test>com.gayu.Gayathri.DashBoard_Numbers</test>
+            <test>com.gayu.Gayathri.LLM_Feedback</test>
           </configuration>
         </plugin>
       </plugins>
