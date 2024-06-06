@@ -94,7 +94,7 @@ public class thumbNail {
 				WebDriverWait wait6 = new WebDriverWait(driver, 30);
 				WebElement table1 = wait6
 						.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Search tags']")));
-				table1.sendKeys("59\n");
+				table1.sendKeys("222\n");
 				Thread.sleep(3000);
 				System.out.println("--------------------------*****************-----------------------");
 				System.out.println("The number Entered Successfully");

@@ -53,11 +53,16 @@
         <artifactId>rest-assured</artifactId>
         <version>4.4.0</version> <!-- Use the latest version -->
     </dependency>
-    <dependency>
-    	<groupId>com.apiTest</groupId>
-    	<artifactId>ApiTest</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
+      <dependency>
+    <groupId>com.jcraft</groupId>
+    <artifactId>jsch</artifactId>
+    <version>0.1.55</version> <!-- Or the latest version available -->
+</dependency>
+<dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>javax.mail</artifactId>
+    <version>1.6.2</version> <!-- or the latest version -->
+</dependency>
    </dependencies>
 
   <build>
@@ -75,7 +80,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration>
-            <test>com.gayu.Gayathri.thumbNail</test>
+            <test>com.gayu.Gayathri.pp4v5</test>
           </configuration>
         </plugin>
       </plugins>

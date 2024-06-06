@@ -3,16 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.gayu.Gayathri.thumbNail">
+      <class name="com.gayu.Gayathri.pp4v5">
         <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="Login"/>
-          <include name="thumbnailview_BFIWHITE"/>
-          <include name="thumbnailview"/>
-          <include name="table"/>
+          <include name="testStorageDetails"/>
         </methods>
-      </class> <!-- com.gayu.Gayathri.thumbNail -->
+      </class> <!-- com.gayu.Gayathri.pp4v5 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
